@@ -1,0 +1,43 @@
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /css
+  static_dir: countdown/css
+  
+- url: /modules
+  static_dir: countdown/modules
+  
+- url: /lib/angular
+  static_dir: countdown/lib/angular
+  
+- url: /lib/bootstrap/dist/js
+  static_dir: countdown/lib/bootstrap/dist/js
+  
+- url: /lib/bootstrap/dist/css
+  static_dir: countdown/lib/bootstrap/dist/css
+  
+- url: /lib/bootstrap/dist/fonts
+  static_dir: countdown/lib/bootstrap/dist/fonts
+  
+- url: /lib/bootstrap/js
+  static_dir: countdown/lib/bootstrap/js
+  
+- url: /lib/bootstrap/less
+  static_dir: countdown/lib/bootstrap/less
+  
+- url: /lib/jquery
+  static_dir: countdown/lib/jquery
+  
+- url: /templates
+  static_dir: countdown/templates
+
+- url: .*
+  script: main.app
+
+libraries:
+- name: jinja2
+  version: "2.6"
+- name: markupsafe
+  version: "0.15"
